@@ -8,7 +8,7 @@ const Formulario = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const mensagemDeErro = useMensagemDeErro();
   const adicionarNaLista = useAdicionarParticipante();
-  
+
   const adicionarParticipante = (evento: React.FormEvent<HTMLFormElement>) =>{
     evento.preventDefault();
     adicionarNaLista(nome);
@@ -24,6 +24,7 @@ const Formulario = () => {
         onChange={evento => setNome(evento.target.value)}
         type="text" 
         placeholder="Digite o nome"
+        required
       />
       <button disabled={!nome}> Adiocionar</button>
       {mensagemDeErro && <p role='alert'>{mensagemDeErro}</p>}

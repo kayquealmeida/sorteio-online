@@ -1,6 +1,6 @@
 import { useRecoilValue } from "recoil"
-import { listaParticipantesState } from "../atom"
+import { listaParticipanteState } from "../atom"
 
 export const useListaDeParticipantes = () => {
-  return useRecoilValue(listaParticipantesState);
+  return useRecoilValue(listaParticipanteState);
 }
